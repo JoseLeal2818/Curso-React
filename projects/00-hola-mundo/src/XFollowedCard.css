@@ -1,0 +1,78 @@
+.miniCard {
+  width: 21em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+}
+
+.miniCard .infoImg {
+  flex-grow: 1;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.miniCard .infoImg > img {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniCard .infoImg .info {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .15em;
+  margin: 0 .5em;
+  color: white;
+}
+
+.miniCard .infoImg .info strong{
+ font-size: 1.1em;
+}
+.miniCard .infoImg .info span{
+ font-size: .8em;
+}
+
+.miniCard .btnFollow{
+    background: white;
+    padding: 0.5em 1.3em;
+    border-radius: 2em;
+    outline: 0;
+    border: 0;
+    font-weight: bold;
+    font-family: system-ui;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease background-color;
+}
+
+.miniCard .btnFollow:hover{
+    background: #09f;
+}
+
+.miniCard .btnFollowing{
+    background: #09f;
+    padding: 0.5em 1.3em;
+    border-radius: 2em;
+    outline: 0;
+    border: 0;
+    font-weight: bold;
+    font-family: system-ui;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s ease background-color;
+}
+
+.miniCard .btnFollowing:hover{
+    background: red;
+    color: white;
+    transition: .3s ease background-color;
+}
