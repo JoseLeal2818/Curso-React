@@ -1,21 +1,21 @@
 import "./XFollowedCard.css";
-import { useState } from 'react'
+import { useState } from "react";
 // Forma 1 de recuperar imagenes, ejemplo JoseLeal2818
 // const imageSrc = `https://unavatar.io/github/${userName}`;
 
 // Forma 2
 // {`https://unavatar.io/github/${userName}`}
 
-export function XFollowedCard({ children, userName }) {
+export function XFollowedCard({ children, userName, initialIsFollowing }) {
   // (Estado interno) Estado del boton, primer valor estado inicial, segundo valor el que va a estar cambiando
-  const [isFollowing, setIsFollowing] = useState(false);
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
 
   const text = isFollowing ? "Siguiendo" : "Seguir";
   const buttonSeguir = isFollowing ? "btnFollowing" : "btnFollow";
 
   const handleCick = () => {
-    setIsFollowing(!isFollowing)
-  }
+    setIsFollowing(!isFollowing);
+  };
 
   return (
     <article className="miniCard">
@@ -27,7 +27,10 @@ export function XFollowedCard({ children, userName }) {
         </div>
       </header>
 
-      <button  className={buttonSeguir} onClick={handleCick}>{text}</button>
+      <button className={buttonSeguir} onClick={handleCick}>
+        <span className="textFollow">{text}</span>
+        <span className="textStopFollow">Dejar de seguir</span>
+      </button>
     </article>
   );
 }

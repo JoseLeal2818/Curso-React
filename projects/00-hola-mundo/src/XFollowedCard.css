@@ -1,5 +1,5 @@
 .miniCard {
-  width: 21em;
+  width: 22em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,4 +75,20 @@
     background: red;
     color: white;
     transition: .3s ease background-color;
+}
+
+.textFollow{
+  display: block
+}
+
+.miniCard .btnFollowing:hover .textFollow {
+  display: none;
+}
+
+.miniCard .btnFollowing:hover .textStopFollow{
+  display: block;
+}
+
+.miniCard .textStopFollow{
+  display: none;
 }
